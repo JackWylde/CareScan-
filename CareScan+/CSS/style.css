@@ -1,0 +1,684 @@
+* {
+   border: 0px; 
+   margin: 0px; 
+   box-sizing: border-box;  
+}
+
+html{
+    font-size: 14px;
+}
+
+h2 {
+    display: block; 
+}
+
+body {
+    line-height: 1.7; 
+    color: #e5e5e5; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #e3e9f0;
+    position:relative;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+nav{
+    width: 100vw;
+}
+
+nav ul {
+    list-style: none; 
+    position: absolute; 
+    right:0;
+    margin-right: 1.5rem;  
+    display: inline-flex;
+    font-size: 1rem;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul li {
+    display: inline; 
+    margin: 0.5rem;
+    cursor: pointer;  
+    opacity: 0.7; 
+    letter-spacing: 0.2rem; 
+    transition: all .2s ease-in;
+    -webkit-font-smoothing: antialiased; 
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+nav ul li:hover {
+opacity:0.9; 
+transform: translateY(-.2rem);
+}
+
+nav ul li:active {
+    opacity:0.9; 
+    transform: translateY(-.1rem); 
+}
+
+.navbar{
+    background-color:rgba(0,94,184,0); 
+    transform: scale(1); 
+    transition: .3s ease-in-out; 
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3500000;
+    background-color:rgba(0,94,184,0); 
+    transition: all .3s ease-in-out; 
+  }
+
+
+header {
+    height: 100vh; 
+    /*  USE PERCENTAGE  */
+    width: 100%;
+    background-image: linear-gradient(rgba(0,94,184,0.7),rgba(0,94,184,0.5) ), url(../IMG/homeimg.png); 
+    background-size: cover;  
+    background-position: bottom; 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); 
+    z-index: 1; 
+    position: relative; 
+}
+
+.inline {
+    display: inline; 
+}
+
+.content {
+    color:#e5e5e5;    
+    background-color: rgba(0,94,184,0.6); 
+    text-align: center; 
+    font-size: 1.5rem; 
+    padding: 2rem; 
+    margin-top: 3rem; 
+}
+
+.container-custom {
+    max-width: 100%;
+    position: relative;
+}
+
+.content p span {
+    font-weight: bold; 
+}
+
+.spacing {
+    letter-spacing: 0.10rem; 
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    margin: 0 auto;  /* Remove this if you don't want the 3D effect */
+    overflow: hidden;
+    border-radius: 0.3rem; 
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;   }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 1rem;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    color:  rgba(0,94,184,1); 
+    letter-spacing: .1rem;   
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: #e5e5e5;   
+    transform: rotateY(180deg);
+    font-size: 1.2rem; 
+  }
+
+  /*BGimages flip cards*/
+
+  .bg-img-flip-1 {
+    background-image: linear-gradient(rgba(227, 233, 240, 0.7),rgba(227, 233, 240, 0.9) ), url(../IMG/cardfront1.jpg); 
+    background-size: cover;  
+    background-position: bottom; 
+  }
+
+  .bg-img-flip-2 {
+    background-image: linear-gradient(rgba(227, 233, 240, 0.7),rgba(227, 233 ,240, 0.9) ), url(../IMG/cardfront2.jpg); 
+    background-size: cover;  
+    background-position: bottom; 
+  }
+
+  .bg-img-flip-3 {
+    background-image: linear-gradient(rgba(227, 233, 240, 0.7),rgba(227, 233, 240, 0.9) ), url(../IMG/cardfront3.jpg); 
+    background-size: cover;  
+    background-position: bottom; 
+  }
+
+
+.godown{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    color: #005eb8; 
+}
+.godown div {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    font-size: 2rem;  
+    text-align: center; 
+    background-color:#EE7115; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    z-index: 100; 
+    position: absolute; 
+    bottom: 5%;
+    opacity: 0.4; 
+    transition: all .5s; 
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.godown div:hover {
+    transform: translateY(-.3rem); 
+}
+
+.godown div:active {
+    transform: translateY(-.1rem); 
+}
+
+.godown div:hover {
+   opacity: 0.8; 
+}
+
+.textcontainer {
+    position: absolute; 
+    left: 3rem; 
+    transform: translateY(-5%);
+    transition: all 1s; 
+    animation-name: fadeInDown;
+}
+
+.pad-top-text {
+    transform: translateY(-10%); 
+}
+
+.textcontainer span { 
+    font-weight: 800; 
+    letter-spacing: .01rem;     
+}
+.lowertext{/* Hook up transitions */
+    transform: translateX(2rem); 
+}
+
+.img-filter {
+    filter: grayscale(70%);
+    webkit-filter: grayscale(70%);
+}
+
+#logoinline {
+    display: inline-block; 
+}
+
+#menuicon { 
+    position: absolute;
+    font-size: 3rem; 
+    right: 0rem; 
+    margin-right: 1rem; 
+}
+
+.nav-bg-trans{
+    background-color: rgba(0,94,184,1); 
+}
+
+.nav-child-shrink{
+    transition: all 0.3s ease-in; 
+    transform: scale(0.95); 
+    margin: 0.2rem; 
+}
+
+.textright {
+    transform: translateX(2rem);
+    font-weight: 200;
+    opacity: 1; 
+    transition: all 1s; 
+}
+
+.skew {
+    height: 100vh; 
+    width: 100vw; 
+    transform: skewY(10deg); 
+    margin-top: -5rem;
+}
+
+section div {
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    position: relative;  
+    z-index: 10; 
+    font-size: 2rem; 
+}
+
+#logo {
+    max-width: 8rem; 
+    margin: 1rem; 
+}
+
+#menucont {
+    width: 100vw;
+    width: 100%; 
+    position: relative; 
+}
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+    background-color: #e3e9f0;
+    font-size: 1.2rem; 
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    z-index: 25000;
+    color: #818181; 
+}
+
+.right p span {
+    font-weight: bold; 
+}
+
+.sat-img {
+    filter: grayscale(80%); 
+    padding: 1rem;
+}
+
+.section-shape {
+    width:100%; 
+    height: 8vh; 
+    position: relative;
+    z-index: 15000; 
+    background-color:#e3e9f0;
+    transform:skewY(2deg); 
+    position: relative; 
+    margin-top: -2rem;
+    margin-bottom: -2rem;  
+    
+}
+
+.value-section {
+    width: 100%; 
+    background-image: linear-gradient(rgba(0,94,184,0.7),rgba(0,94,184,0.5) ), url(../IMG/section-background.png); 
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed; 
+    padding-bottom: 5rem; 
+    
+}
+
+.value-container {
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-content: space-between; 
+}
+
+.value-item {
+    width: 20rem; 
+    height: 20rem; 
+    margin: 1rem; 
+}
+
+.front-text {
+    position: relative; 
+    text-align: center; 
+    padding-top: 3rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;  
+    font-size: 2rem; 
+}
+
+
+
+.go-to-top {
+    width: 2rem; 
+    height: 2rem; 
+    background-color: rgba(238, 111, 21, 0.7); 
+    color: rgba(0,94,184); 
+    position: fixed; 
+    z-index: 2500000;
+    bottom: 0; 
+    right: 0; 
+    border-radius: 1rem;
+    margin: 2rem;  
+    display: none; 
+    transition: all .2s ease-in-out; 
+    opacity: 0; 
+    font-size: 1.5rem;
+}
+
+.go-to-top:hover {
+    background-color: rgba(238, 111, 21, 1);
+}
+
+.show-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; 
+}
+
+footer {
+    height: auto;
+    background-color: #005EB8;
+    line-height: 100%;
+    padding-top:1rem; 
+  }
+  footer p {
+    margin-bottom: 0rem;
+  }
+  footer p span {
+    font-weight: bold;
+  }
+  footer h2 {
+    margin-bottom: 0rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  footer img {
+    width: 5rem;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .grid-container {
+  display: grid;
+  width:100%; 
+  grid-template-columns: 100%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: 2rem; 
+}
+.grid-item {
+  padding: 1rem;
+  margin: auto;
+}
+
+/*Burger Menus CSS */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,94,184);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 5000000;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .overlay a {
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 3rem;
+    color: #e3e9f0;
+    display: block;
+    transition: 0.3s;
+    letter-spacing: .3rem; 
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    right: 2rem;
+    font-size: 4rem;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .menuitems {
+        display: none; 
+    }
+
+}
+
+
+/* Contact Form CSS */
+
+.contact-shape {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 49%, 0 19%);
+    clip-path: polygon(0 0, 100% 0, 100% 49%, 0 19%);
+    background-color: #e3e9f0;
+    width: 100%;
+    height: 20vh;
+}
+ 
+#contact-container {
+    
+}
+ 
+.contact-row {
+    
+}
+ 
+.contact-img {
+    background-image: linear-gradient(rgba(227, 233, 240, 0.7),rgba(227, 233, 240, 0.9) ), url(../IMG/contact-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.contact-img h2 {
+    color: #005eb8;
+    font-weight: bold;
+    position: relative;
+    top: 5%;
+    left:5%; 
+    letter-spacing: 0.1rem; 
+    width: 75%; 
+}
+
+.blue {
+    background-image: linear-gradient(rgba(0,94,184,0.7),rgba(0,94,184,0.5) ), url(../IMG/section-background.png); 
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed; 
+    position: relative; 
+    top: 1.5rem; 
+}
+ 
+.contact-text {
+    padding-left: 1rem;
+    color:  #005eb8;
+}
+ 
+#contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 5rem; 
+}
+
+#contact-form-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+ 
+.form-group {
+    width: 50%;  
+    padding: 0 1rem;
+    text-transform: uppercase; 
+}
+ 
+.message-input {
+    width: 100%;
+}
+
+.margin-top {
+    margin-top: 1rem; 
+}
+ 
+.message-input > input {
+    min-height: 200px;
+}
+ 
+#submit-button {
+    position: absolute;
+    max-height: 40px;
+    padding: 0.5 2rem;
+    bottom: -6%;
+    right: 0;
+    margin-right: 1rem;
+    background-color: orange;
+}
+ 
+.img-text {
+    font-size: 2.5rem;
+    padding: 3rem;
+}
+ 
+.form-control {
+    background-color: lightgray;
+}
+ 
+.form-control:active {
+    background-color:white;
+}
+
+.form-label {
+    color: #005eb8;
+}
+
+#submit-button {
+    border-radius: 5px;  
+    font-size: 0.8rem;
+    color: #005eb8;
+}
+
+
+
+
+@media only screen and (min-width: 576px) {
+    html{
+        font-size: 15px;
+    }
+
+    .textcontainer {
+        left: 5rem;
+    }
+
+    .godown div{
+        width: 2rem; 
+        height: 2rem; 
+        font-size: 1.5rem;  
+    }
+
+    #menuicon {
+        display: none; 
+    }
+
+    .grid-container {
+        grid-template-columns: 33% 33% 33%;
+      }
+}
+
+
+@media only screen and (min-width: 700px) {
+    html{
+        font-size: 20px;
+    }
+
+    .textcontainer {
+        left: 5rem;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    html{
+        font-size: 26px;
+    }
+
+    .textcontainer {
+        left: 7rem;
+        font-size: 36rem; 
+    }
+
+    .godown div{
+        font-size: 1.5rem; 
+        bottom: 15%;
+    }
+
+    header{
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); 
+    }
+
+    .go-to-top {
+        font-size: 1.2rem;
+    }
+}
